@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+  background-color: white;
+  color:black;
+}
+
+.dark-mode{
+  background-color:black;
+  color:white;
+}
+  </style>
+</head>
+<body>
+<button onclick='showdate()'>
+let me show your the date.
+</button>
+
+
+<p id='demo'></p>
+<p id="am"></p>
+<p id="le"></p>
+<p id="answer"></p>
+<p id="mjw"></p>
+<p id="tem"></p>
+<button onclick='toggle()'>Toggle Mode</button>
+<button onclick="ftoc()">f to c</button>
+<script>
+  function showdate(){
+  document.getElementById('demo').innerHTML = Date();
+
+}
+var myarray =['a','b',2,4,'foever','love'];
+myarray[0]='y';
+myarray[1]='y';
+myarray[2]='q';
+myarray[3]='x';
+alert(myarray);
+
+function greeting(){
+ var a=prompt('what is your name');
+ document.getElementById('am').innerHTML='hello'+a;
+}
+greeting();
+
+var e = prompt('what is your gender?');
+
+if (e=="male") {
+ document.getElementById('le').innerHTML = ("hello"+e);
+}
+else {
+document.getElementById('le').innerHTML = ("hello"+e);
+}
+
+
+var c = prompt('guess a number between 0 and 10');
+var b = Math.floor(Math.random()*11);
+
+if (c > b) {
+ document.getElementById('answer').innerHTML = ("too big,the answer is"+b);
+}
+else if (b > c){
+document.getElementById('answer').innerHTML = ("too small,the answer is"+b);
+}
+else{
+document.getElementById('answer').innerHTML =('good guess!');
+}
+
+
+function toggle(){
+  document.body.classList.toggle('dark-mode');
+}
+
+
+function toCelsius(f){
+      return(5/9)*(f-32);}
+function ftoc(){
+    var s=parseInt(prompt('Type in the F'));
+    document.getElementById('tem').innerHTML=toCelsius(s);}
+
+
+switch(new Date().getDay()){
+  case 0:document.getElementById('mjw').innerHTML= 'today is Sunday';
+  break;
+  case 1:document.getElementById('mjw').innerHTML='today is Monday';
+  break;
+  case 2:document.getElementById('mjw').innerHTML='today is Tuesday';
+  break;
+  case 3:document.getElementById('mjw').innerHTML='today is Wednesday';
+  break;
+  case 4:document.getElementById('mjw').innerHTML='today is Thursday';
+  break;
+  case 5:document.getElementById('mjw').innerHTML='today is Friday';
+  break;
+  case 6:document.getElementById('mjw').innerHTML='today is Saturday';
+  break;
+
+}
+
+    
+</script>
+</body>
+</html>
+
+
+
+
+
+
